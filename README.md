@@ -30,40 +30,38 @@ The client sees only the target interface and not the adapter. The adapter imple
  
  **Advantages:**
  
- •	Solves the issue with large number of optional parameters and inconsistent state by providing a way to build the object step-by-step and provide a method that will actually return the final object.
-•	Provides control over steps of creation process.
-•	Different representation of object is possible.
+ - Solves the issue with large number of optional parameters and inconsistent state by providing a way to build the object step-by-step and provide a method that will actually return the final object.
+ - Provides control over steps of creation process.
+ - Different representation of object is possible.
 
 **Disadvantages:**
 
-•	The builder pattern is verbose and requires code duplication as Builder needs to copy all fields from Original/Outer Class.
-•	Data members of class aren’t guaranteed to be initialized.
-•	Dependency injection may be less supported.
+- The builder pattern is verbose and requires code duplication as Builder needs to copy all fields from Original/Outer Class.
+- Data members of class aren’t guaranteed to be initialized.
+- Dependency injection may be less supported.
 
 ## State Pattern: 
 State is a behavioral design pattern that lets an object alter its behavior when it’s internal state changes. In state pattern, we can create objects which represent various states and a context object whose behavior varies as its state changes.
 Consider an ATM machine, if the state is Debit Card Not Inserted then it will allow you to perform certain operations and when the state is Debit Card Inserted then it will allow you to perform another set of operations. So, based on the internal state of the ATM machine the behavior will be changed
 
 **Advantages:**
-
-•	Reduces the complexity by eliminating the state conditional statements
-•	Behavior is determined at run time, and can easily change. 
-•	It can easily be extended, i.e. new behavior can easily be added.
+- Reduces the complexity by eliminating the state conditional statements.
+- Behavior is determined at run time, and can easily change.
+- It can easily be extended, i.e. new behavior can easily be added.
 
 **Disadvantages:**
 
-•	If there are multiple states, we need a class for each state and the overall program can easily become too complex. But this also provides a separation of concern so it is also an advantage.
-•	The memory use can be too high, if there are many objects, each one with its own state. This can easily be avoided by making the states singleton objects.
+- If there are multiple states, we need a class for each state and the overall program can easily become too complex. But this also provides a separation of concern so it is also an advantage.
+- The memory use can be too high, if there are many objects, each one with its own state. This can easily be avoided by making the states singleton objects.
 
 ## Proxy Pattern:
 Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
 Example consider college internet or any office internet, which restricts few site access. The proxy first checks the host you are connecting to, if it is not part of restricted site list, then it connects to the real internet.
 
 **Advantages:**
-
-•	One of the advantages of Proxy pattern is security.
-•	This pattern avoids duplication of objects which might be huge size and memory intensive. This in turn increases the performance of the application.
-•	The remote proxy also ensures about security by installing the local code proxy (stub) in the client machine and then accessing the server with help of the remote code.
+- One of the advantages of Proxy pattern is security.
+- This pattern avoids duplication of objects which might be huge size and memory intensive. This in turn increases the performance of the application.
+- The remote proxy also ensures about security by installing the local code proxy (stub) in the client machine and then accessing the server with help of the remote code.
 
 **Disadvantages:**
 
